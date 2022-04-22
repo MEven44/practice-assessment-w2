@@ -21,8 +21,12 @@ filterUserProfiles(facebookUsers, (user) => user.state === "New York"); // ["Mik
 ***********************************************************************/
 
 function filterUserProfiles(users, filter) {
-  // Your code here
-
+  const arrayOfNames =[]; //dfine an array for the names
+  for (let person of users) { //access the objects
+       if (filter(person))  //give me a true or false
+       arrayOfNames.push(person.name)
+  }
+  return arrayOfNames
 
 }
 

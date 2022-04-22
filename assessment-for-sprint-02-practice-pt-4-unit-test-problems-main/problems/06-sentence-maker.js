@@ -11,8 +11,14 @@ sentenceMaker('I', 'love', 'coding'); // 'I love coding!'
 sentenceMaker('The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'); // 'The quick brown fox jumps over the lazy dog!'
 ***********************************************************************/
 
-// Your code here
+const sentenceMaker = (...words) =>{
+let sentence = '';
+let arr = words
+sentence = arr.join(" ") + "!"
+return sentence
+}
 
+console.log(sentenceMaker('Hello', 'World')); // 'Hello World!'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
