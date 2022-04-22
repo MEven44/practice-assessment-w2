@@ -14,9 +14,21 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 ***********************************************************************/
 
 function keyAdderUniqueVal(object, key, value) {
+    let indi = false
+    for (let key1 in object) {
+        console.log (object[key1])
+        if (object[key1]===value) indi =true
+       
+    }
+    if (!indi)  object[key]=value
+    return object
+    }
+         
 
 
-}
-
+let cat = { name: 'Willie', color: 'orange' };
+keyAdderUniqueVal(cat, "toy", "yarn"); // => {name: "Willie", color: "orange", toy: "yarn"}
+keyAdderUniqueVal(cat, "fruit", "orange"); // => {name: "Willie", color: "orange", toy: "yarn"}
+console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyAdderUniqueVal;
